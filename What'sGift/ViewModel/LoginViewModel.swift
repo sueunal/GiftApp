@@ -1,10 +1,11 @@
 //
-//  LoginViewModel.swift
-//  What'sGift
+//  AuthViewModel.swift
+//  Study
 //
-//  Created by sueun kim on 2023/06/28.
+//  Created by sueun kim on 2023/06/25.
 //
-import Foundation
+
+import SwiftUI
 import Firebase
 
 class AuthViewModel: ObservableObject {

@@ -25,11 +25,12 @@ struct GiftListView: View {
                 ScrollView{
                     LazyVGrid(columns: columns,spacing: 30) {
                         ForEach(0x1f600...0x1f679, id: \.self) { value in
-                            NavigationLink(destination:Text("asdf")) {
+                            NavigationLink(destination:Text("")) {
                                 GiftItem()
                             }
                         }
                     }
+                    
                 }
             }
         }

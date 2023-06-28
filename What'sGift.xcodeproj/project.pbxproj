@@ -110,8 +110,8 @@
 			isa = PBXGroup;
 			children = (
 				2CD128D02A4C244700F36972 /* GoogleService-Info.plist */,
-				2CD128CC2A4C221F00F36972 /* ViewModel */,
 				2CCC80332A4AD3AE00C0BE84 /* What_sGiftApp.swift */,
+				2CD128CC2A4C221F00F36972 /* ViewModel */,
 				2CCC805D2A4ADAE200C0BE84 /* View */,
 				2CCC80372A4AD3AF00C0BE84 /* Assets.xcassets */,
 				2CCC80392A4AD3AF00C0BE84 /* Preview Content */,
