@@ -14,17 +14,21 @@ struct GiftListView: View {
     var body: some View {
         NavigationStack(path:$path.self){
             VStack{
-                    HStack{
-                        Image(systemName: "gift")
-                            .resizable()
-                            .frame(width: 40,height: 40)
-                        Text("Gift")
-                            .font(.system(size: 30))
-                            .fontWeight(.bold)
-                    }
+                HStack{
+                    Image(systemName: "gift")
+                        .resizable()
+                        .frame(width: 40,height: 40)
+                    Text("Gift")
+                        .font(.system(size: 30))
+                        .fontWeight(.bold)
+                }
+                ScrollView(.horizontal){
+                    CategoriView()
+                }
+                Divider()
                 ScrollView{
                     LazyVGrid(columns: columns,spacing: 30) {
-                        ForEach(0x1f600...0x1f679, id: \.self) { value in
+                        ForEach(0...20, id: \.self) { value in
                             NavigationLink(destination:Text("")) {
                                 GiftItem()
                             }
@@ -32,6 +36,24 @@ struct GiftListView: View {
                     }
                     
                 }
+            }
+        }
+    }
+    @ViewBuilder
+    func CategoriView()->some View {
+        var categori : [Categori] = [.age,.birthday,.friend,.lover,.price,.sex]
+        HStack{
+            ForEach(categori,id:\.self){ value in
+                VStack{
+                    Image(systemName: "person")
+                        .resizable()
+                        .frame(width: 80,height: 80)
+                        .aspectRatio(contentMode: .fill)
+                    Text(value.filtering)
+                }.background(
+                    Rectangle()
+                        .stroke()
+                ).aspectRatio(contentMode: .fit)
             }
         }
     }
